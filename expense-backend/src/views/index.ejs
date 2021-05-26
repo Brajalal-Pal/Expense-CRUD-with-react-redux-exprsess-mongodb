@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    
+        table {
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+    
+        td {
+            padding: 5px;
+            border-top: 1px solid gray;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        th {
+            background-color: azure;
+            border: 1px solid azure;
+        }
+    </style>
+</head>
+
+<body style="width: 80%; margin-left: auto; margin-right: auto;">
+    <h2><%=message%></h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Route</th>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="/expense">/expense</a></td>
+                <td>GET, POST</td>
+                <td>Get all expense data by GET method, POST will allow adding new expense record</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/expense/category/mbill">/expense/category/{id}</a><br />
+                    <a href="/expense/payment/UPI">/expense/payment/{mode}</a><br />
+                    <a href="/expense/date/20210509">/expense/date/{expenseDate}</a><br />
+                    <a href="/expense/billref/EBILL250">/expense/billref/{billRef}</a><br />
+                </td>
+                <td>PUT, DELETE</td>
+                <td>PUT to update specific expense entry, DELETE to a specific expense entry</td>
+            </tr>
+            <tr>
+                <td><a href="/category">/category</a></a></td>
+                <td>GET, POST</td>
+                <td>Get all expense data by GET method, POST will allow adding new expense record</td>
+            </tr>
+            <tr>
+                <td><a href="/category/elbill">/category/{elbill}</a></td>
+                <td>GET, PUT, DELETE</td>
+                <td>Get all expense data by GET method, POST will allow adding new expense record</td>
+            </tr>
+            <tr>
+                <td colspan="3">* <b>To execute methods other then GET use Postman or any other such tool.</b></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
